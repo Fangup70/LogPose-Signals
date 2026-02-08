@@ -11,7 +11,8 @@ const UserDropdown = () => {
   const handleLogout = () => {
     router.push('/login');
   }
-  const user = { name: "Anup", email: "[EMAIL_ADDRESS]" }
+  //name
+  const user = { name: "Anup", email: "[EMAIL_ADDRESS]" }   
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
