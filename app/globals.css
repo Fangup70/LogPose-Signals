@@ -172,7 +172,7 @@
     z-index: 50;
     width: 100%;
     border-bottom: 1px solid var(--border);
-    background-color: var(--background) / 80;
+    background-color: var(--background)/80;
     backdrop-filter: blur(8px);
   }
 
