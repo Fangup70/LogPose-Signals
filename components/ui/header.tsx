@@ -3,19 +3,24 @@ import Image from "next/image";
 import NavItems from "./navitems";
 import UserDropdown from "./userdropdown";
 const Header: () => Element = () => {
-
-    return (
-        <header className="sticky top-0 header">
-            <div className="container header-wrapper">
-                <Link href="/">
-                    <Image src="/assets/logo.png" alt="Logpose Signals" width={140} height={32} className="h-8 w-auto cursor-pointer" />
-                </Link>
-                <nav className="hidden sm:block">
-                    <NavItems />
-                </nav>
-                <UserDropdown />
-            </div>
-        </header>
-    )
-}
-export default Header
+  return (
+    <header className="sticky top-0 header">
+      <div className="container header-wrapper">
+        <Link href="/">
+          <Image
+            src="/assets/logo.png"
+            alt="Logpose Signals"
+            width={140}
+            height={32}
+            className="h-8 w-auto cursor-pointer"
+          />
+        </Link>
+        <nav className="hidden sm:block">
+          <NavItems />
+        </nav>
+        <UserDropdown />
+      </div>
+    </header>
+  );
+};
+export default Header;

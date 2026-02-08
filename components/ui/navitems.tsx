@@ -1,27 +1,30 @@
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { navitems } from '@/lib/constants'
+"use client";
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { navitems } from "@/lib/constants";
 const NavItems = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
   const isActive = (path: string) => {
-    if (path === '/') return pathname === '/';
+    if (path === "/") return pathname === "/";
     return pathname.startsWith(path);
-  }
+  };
   return (
-    <ul className='flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium'>
+    <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium">
       {navitems.map(({ href, label }) => (
         <li key={href}>
-          <Link href={href} className={`hover:text-yellow-500 transition-colors ${isActive(href) ? 'text-gray-100' : ''
-            }`}>
+          <Link
+            href={href}
+            className={`hover:text-yellow-500 transition-colors ${
+              isActive(href) ? "text-gray-100" : ""
+            }`}
+          >
             {label}
           </Link>
         </li>
       ))}
-    </ul >
-  )
+    </ul>
+  );
+};
 
-}
- 
-export default NavItems
+export default NavItems;

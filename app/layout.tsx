@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LogPose Signals",
-  description: "Real-time stock screener for trend, momentum, and signal-based trade discovery.",
+  description:
+    "Real-time stock screener for trend, momentum, and signal-based trade discovery.",
 };
 
 export default function RootLayout({
