@@ -12,6 +12,16 @@ interface TradingViewWidgetProps {
     className?: string;
 }
 
+/**
+ * Renders a container for embedding a TradingView chart using the provided configuration.
+ *
+ * @param title - Visible or descriptive title for the widget (used by consumers or for accessibility)
+ * @param config - TradingView widget configuration object passed to the initialization hook
+ * @param height - Height of the widget container in pixels (defaults to 600)
+ * @param scriptUrl - Optional URL of the TradingView embed script to load
+ * @param className - Optional additional CSS class(es) applied to the outer container
+ * @returns The React element that hosts the TradingView widget and its attribution link
+ */
 function TradingViewWidget({title,config,height=600,scriptUrl,className}:TradingViewWidgetProps) {
   const containerRef = useTradingViewWidget(scriptUrl,config,height);
 

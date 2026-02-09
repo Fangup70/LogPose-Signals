@@ -5,6 +5,12 @@ import { Avatar as AvatarPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
 
+/**
+ * Renders an avatar container with selectable size variants and forwarded props.
+ *
+ * @param size - Visual size variant: "default" (base), "sm" (small), or "lg" (large)
+ * @returns A React element representing the Avatar root with the selected size applied and all other props forwarded to the underlying Radix Avatar primitive
+ */
 function Avatar({
   className,
   size = "default",
@@ -25,6 +31,12 @@ function Avatar({
   );
 }
 
+/**
+ * Renders an avatar image element with standardized sizing and a data-slot for composition.
+ *
+ * @param className - Additional CSS class names to apply to the image element
+ * @returns A React element rendering the avatar image
+ */
 function AvatarImage({
   className,
   ...props
@@ -38,6 +50,11 @@ function AvatarImage({
   );
 }
 
+/**
+ * Renders fallback content for an Avatar, styled and sized to match the avatar component.
+ *
+ * @returns A React element containing the avatar fallback content with appropriate `data-slot` and styling.
+ */
 function AvatarFallback({
   className,
   ...props
@@ -54,6 +71,11 @@ function AvatarFallback({
   );
 }
 
+/**
+ * Renders a badge positioned at the bottom-right of an Avatar and sized according to the parent's `data-size`.
+ *
+ * @returns The span element used as the avatar badge.
+ */
 function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
@@ -70,6 +92,11 @@ function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
   );
 }
 
+/**
+ * Renders a container that groups Avatar components with overlapping layout.
+ *
+ * @returns A `div` element with `data-slot="avatar-group"` and classes that apply a flex layout, negative horizontal spacing to overlap avatars, and ring handling for child avatar elements.
+ */
 function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -83,6 +110,15 @@ function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
+/**
+ * Renders a small count indicator for an avatar group.
+ *
+ * The element is sized and styled to match the parent AvatarGroup's size variants and is positioned to overlap avatars.
+ *
+ * @param className - Additional class names to apply to the count element
+ * @param props - Props forwarded to the underlying `div` element
+ * @returns A `div` element used as a count indicator for an avatar group
+ */
 function AvatarGroupCount({
   className,
   ...props
