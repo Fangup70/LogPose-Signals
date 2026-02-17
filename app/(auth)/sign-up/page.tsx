@@ -25,10 +25,9 @@ const SignUp = () => {
         },);
         const OnSubmit=async(data:SignUpFormData)=>{
             try{
-                console.log(data);
-            }
-            catch(e){
-                console.error(e);
+                // TODO: Implement sign-up logic here
+            }catch(e){
+                console.error('Sign up error:', e);
             }
         }
   return (

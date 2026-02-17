@@ -24,9 +24,9 @@ const SignIn = () => {
 
     const onSubmit = async (data: SignInFormData) => {
         try {
-            console.log(data)
+            // TODO: Implement sign-in logic here
         } catch (e) {
-            console.error(e)
+            console.error('Sign in error:', e);
         }
     }
 
